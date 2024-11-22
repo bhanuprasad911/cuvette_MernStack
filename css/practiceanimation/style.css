@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: pink;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    height: 30px;
+    width: 90px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Hover effect */
+.Yes:active {
+    animation: jump 1s infinite; /* Trigger the jump animation on hover */
+    animation-fill-mode: forwards;
+}
+
+/* Define the jump animation using keyframes */
+@keyframes jump {
+    0% {
+        transform: translate(0, 0); /* Starting position */
+    }
+    50% {
+        transform: translateX(-100px); /* Move left and down */
+    }
+    100% {
+        transform: translateY(100px); /* Move to a final position */
+        animation-play-state: paused;
+    }
+}

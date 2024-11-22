@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+div{
+    position: absolute;
+}
+.nav{
+    height: 100vh;
+    width: 15%;
+    top: 0px;
+    background-color: lightpink;
+}
+.header{
+    width: 85vw;
+    height:20%;
+    margin-left: 15%;
+    background-color: lightblue;
+}
+.article{
+    width: 75%;
+    height: 60%;
+    left:15%;
+    top: 20%;
+    background-color:lightyellow;
+}
+.aside{
+    width: 10%;
+    height: 60%;
+    right: 0px;
+    top: 20%;
+    background-color: lightgreen;
+}
+.footer{
+    width: 85vw;
+    height: 20%;
+    bottom: 0px;
+    left: 15%;
+    background-color: lightcoral;  
+}

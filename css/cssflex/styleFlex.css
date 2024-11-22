@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Make the container fill the full viewport height */
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 20% 60% 20%; /* Define 3 rows: header (20%), content (60%), footer (20%) */
+    grid-template-columns: 15% 70% 15%; /* Define 3 columns: nav (15%), main content (70%), aside (15%) */
+    height: 100%; /* Full height of the body */
+    width: 100%; /* Full width of the body */
+}
+
+.header {
+    grid-column: 2 / 4; /* Spans from the second column to the fourth */
+    grid-row: 1; /* Occupies the first row */
+    background-color: #a3d977; /* Light green background */
+    border: 1px solid black;
+    text-align: center;
+}
+
+.nav {
+    grid-column: 1; /* Occupies the first column */
+    grid-row: 1 / 4; /* Spans from the first row to the third (full height of the container) */
+    background-color: #d9eadd; /* Light greenish background */
+    border: 1px solid black;
+    text-align: center;
+}
+
+.article {
+    grid-column: 2; /* Occupies the second column */
+    grid-row: 2; /* Occupies the second row */
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.aside {
+    grid-column: 3; /* Occupies the third column */
+    grid-row: 2; /* Occupies the second row */
+    background-color: #f7f5db; /* Light yellowish background */
+    border: 1px solid black;
+    text-align: center;
+}
+
+.footer {
+    grid-column: 2 / 4; /* Spans from the second column to the fourth */
+    grid-row: 3; /* Occupies the third row */
+    background-color: #a3d977; /* Light green background */
+    border: 1px solid black;
+    text-align: center;
+}
