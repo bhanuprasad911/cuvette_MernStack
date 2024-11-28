@@ -1,0 +1,88 @@
+/* General Timeline Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Single Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid #fff;
+}
+
+/* Alternate Timeline Content - Left for Odd Items */
+.timeline-item:nth-child(odd) .timeline-content {
+    position: absolute;
+    left: 0px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternate Timeline Content - Right for Even Items */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Content Heading */
+.timeline-content h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Timeline Content Description */
+.timeline-content p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Timeline Content Date */
+.timeline-content span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}

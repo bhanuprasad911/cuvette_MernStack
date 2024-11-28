@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Carousel with Buttons</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 500%; /* Adjust for number of slides */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 1 0 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Slide Colors */
+        .carousel-item:nth-child(1) { background-color: #ff6f61; }
+        .carousel-item:nth-child(2) { background-color: #ffcc00; }
+        .carousel-item:nth-child(3) { background-color: #8bc34a; }
+        .carousel-item:nth-child(4) { background-color: #42a5f5; }
+        .carousel-item:nth-child(5) { background-color: #ab47bc; }
+
+        /* Navigation Buttons */
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .carousel-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .carousel-buttons button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Hidden Radio Buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Slide Control */
+        #slide1:checked ~ .carousel-inner {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .carousel-inner {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked ~ .carousel-inner {
+            transform: translateX(-200%);
+        }
+
+        #slide4:checked ~ .carousel-inner {
+            transform: translateX(-300%);
+        }
+
+        #slide5:checked ~ .carousel-inner {
+            transform: translateX(-400%);
+        }
+
+        /* Navigation Buttons Behavior */
+        #slide1:checked ~ .carousel-buttons .prev {
+            display: none; /* Hide 'Prev' button on the first slide */
+        }
+
+        #slide5:checked ~ .carousel-buttons .next {
+            display: none; /* Hide 'Next' button on the last slide */
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <!-- Hidden Radio Buttons for Navigation -->
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+        <input type="radio" name="carousel" id="slide4">
+        <input type="radio" name="carousel" id="slide5">
+
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+            <div class="carousel-item">Slide 1</div>
+            <div class="carousel-item">Slide 2</div>
+            <div class="carousel-item">Slide 3</div>
+            <div class="carousel-item">Slide 4</div>
+            <div class="carousel-item">Slide 5</div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="carousel-buttons">
+            <label for="slide1" class="prev" onclick="document.getElementById('slide1').checked = true">Prev</label>
+            <label for="slide2" class="prev" onclick="document.getElementById('slide2').checked = true">Prev</label>
+            <label for="slide3" class="prev" onclick="document.getElementById('slide3').checked = true">Prev</label>
+            <label for="slide4" class="prev" onclick="document.getElementById('slide4').checked = true">Prev</label>
+            <label for="slide5" class="prev" onclick="document.getElementById('slide5').checked = true">Prev</label>
+        </div>
+</body>
