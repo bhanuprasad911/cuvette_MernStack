@@ -16,13 +16,13 @@
     justify-content: center;align-items: center;
     flex-wrap: wrap;
     border-radius: 5px;
-    width: 23%;
-    height: 55%;
+    width: 25%;
+    height: 60%;
     background-color: rgba(255, 255, 255, 0.5);
 }
 input{
-    width: 17em;
-    height: 4em;
+    width: 85%;
+    height: 18%;
     border-radius: 3px;
     border: none;
     font-size: larger;
@@ -30,8 +30,8 @@ input{
     padding: 5px;
 }
 .buttons{
-    width: 20em;
-    height: 37vh;
+    width: 85%;
+    height: 65%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,8 +41,8 @@ input{
     border: none;
 }
 button{
-    width: 2.5em;
-    height: 40px;
+    width: 20%;
+    height: 13%;
     border-radius: 8px;
     font-size: larger;
     margin: 5px;
@@ -63,3 +63,9 @@ button{
     ;
 }
 
+@media screen and (max-width: 900px) {
+.calc{
+    width: 80%;
+}
+    
+}
