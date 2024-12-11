@@ -1,5 +1,6 @@
 const output = document.getElementById("output");
 const buttons = document.querySelectorAll("button");
+console.log(buttons);
 
 let input = "";
 let calculated = false;

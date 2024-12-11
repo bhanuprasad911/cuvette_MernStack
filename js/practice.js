@@ -25,3 +25,6 @@
 // dog.breed="LAB";
 // console.log(dog.species);
 // console.log(dog);
+var bhanu
+bhanu="Bhanu";
+console.log(bhanu);
