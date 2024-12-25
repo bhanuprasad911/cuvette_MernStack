@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.main {
+    background-color: rgba(140, 196, 97, 1);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 1);
+    width: 55%;
+    height: 15%;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+.connect {
+    position: absolute;
+    width: 20%;
+    height: 2%;
+    top: 35%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.64);
+    z-index: 1;
+}
+
+.r_p {
+    top: 55%;
+    left: 35%;
+    transform: rotate(65deg);
+}
+
+.p_s {
+    top: 55%;
+    left: 45%;
+    transform: rotate(-65deg);
+}
+
+.gamemarks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.marks {
+    background-color: white;
+    height: 100%;
+    width: 15%;
+    color: rgba(37, 37, 37, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+}
+
+.marks#user {
+    margin-right: 13px;
+}
+
+.marks h5 {
+    color: rgba(101, 101, 101, 1);
+    font-size: 70%;
+}
+
+.play {
+    margin: 2%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+}
+
+.selection {
+    margin: 2%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+}
+
+.selection_btn {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.loose {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loose_button {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+
+.report {
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.repeat_btn {
+    width: 40%;
+    height: 8%;
+    background-color: white;
+    color: rgba(107, 107, 107, 1);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10%;
+}
+
+.innerwintag {
+    font-size: 1em;
+}
+
+.wintag {
+    font-size: 3em;
+}
+
+.systag {
+    font-size: 1.5em;
+
+}
+
+#user_report {
+    width: 30%;
+
+}
+
+.selection-dec {
+    height: 80%;
+    width: 70%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #078203 30%, #078203 30%, #1c8c18 40%, #1c8c18 40%, #60c74c 60%, #60c74c 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%
+}
+
+#win_report {
+    width: 20%;
+}
+
+#system_report {
+    width: 30%;
+}
+
+.click {
+    height: 100%;
+    width: 30%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20%;
+}
+
+.btn {
+    height: 35%;
+    width: 35%;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+#rbtn {
+    border: 15px solid rgba(0, 116, 182, 1);
+}
+
+#pbtn {
+    border: 15px solid rgba(255, 169, 67, 1);
+}
+
+#sbtn {
+    border: 15px solid rgba(189, 0, 255, 1)
+}
+
+.background {
+    border-image-source: radial-gradient(darkgreen, green);
+    border-image-slice: 1;
+}
+
+.rules {
+    width: 100%;
+    height: 10%;
+}
+
+.gamerules {
+    position: absolute;
+    top: 48%;
+    right: 6%;
+    border: 5px solid white;
+    width: 16%;
+    border-radius: 10px;
+    height: 40%;
+    background-color: rgba(0, 68, 41, 1);
+    color: white;
+    visibility: hidden;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.rulebtn {
+    position: relative;
+    top: 30%;
+    left: 90%;
+    width: 6%;
+    height: 45%;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.rulebtn2 {
+    position: relative;
+    top: 30%;
+    left: 60%;
+    width: 6%;
+    height: 45%;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+
+.hide_button {
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    border: 3px solid white;
+    color: white;
+    height: 4%;
+    width: 2%;
+    top: 46%;
+    left: 93%;
+    z-index: 10;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#reset_btn {
+    left: 85%;
+    height: 45%;
+}
+
+.gamerules h3 {
+    text-align: center;
+    margin: 3%;
+    font-size: x-large;
+}
+
+li {
+    list-style: square;
+    margin: 10%;
+    font-size: x-small;
+}
+
+li::marker {
+    color: yellow;
+}
+
+.main1 {
+    height: 100vh;
+    background-color: rgba(140, 196, 97, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.image {
+    width: 40%;
+    height: 50%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+.hurray {
+    font-size: 800%;
+}
+
+.you {
+    font-size: 400%;
+}
+
+.cup {
+    position: relative;
+    left: 35%;
+    top: 6em;
+}
+
+.bigimage {
+    position: relative;
+    left: -13em;
+    top: 3em;
+}
+
+.bigimage1 {
+    position: relative;
+    left: 10em;
+    top: 5em;
+}
+
+.midimage {
+    position: relative;
+    left: -2em;
+    top: -7em;
+}
+
+.simage {
+    position: relative;
+    left: -30em;
+    top: -4em;
+}
+
+.xsimage {
+    position: relative;
+    left: 8em;
+    top: 3em;
+}
+
+.xsimage1 {
+    position: relative;
+    top: -13em;
+    left: 6em;
+}
+
+.xsimage2 {
+    position: relative;
+    top: -11em;
+    left: 12em;
+}
+
+.xsimage3 {
+    position: relative;
+    top: -6em;
+    left: 25em;
+}
+
+.winrepeat {
+    position: relative;
+    height: 8%;
+    width: 10%;
+    bottom: 8%;
+}
+
+.rules1 {
+    width: 100%;
+    height: 18%;
+}
+.rulebtn1 {
+    position: relative;
+    top: 12%;
+    left: 85%;
+    height: 45%;
+    width: 6%;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -25,6 +25,33 @@
 // dog.breed="LAB";
 // console.log(dog.species);
 // console.log(dog);
-var bhanu
-bhanu="Bhanu";
-console.log(bhanu);
+// var bhanu
+// bhanu="Bhanu";
+// console.log(bhanu);
+function fetchData(){
+    console.log("fetching data")
+    return new Promise((resolve, reject)=>{
+        const success = 1;
+        setTimeout(()=>{
+            console.log("executing timeout function")
+            if (success){
+                resolve({name:"Bhanu", number:8328252312});
+            }
+            else{
+                reject("failedd to fetch data")
+            }
+        },3000)
+    })
+    
+}
+async function fetch() {
+    try{
+        const data = await fetchData();
+        console.log(data);
+        
+    }catch(e){
+        console.log(e);
+    }
+}
+
+fetch()
